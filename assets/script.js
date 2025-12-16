@@ -107,19 +107,29 @@ createDots();
 setSlide(currentIndex);
 
 /* -------- 8) Event listeners sur les flèches (Étape 4) -------- */
-// Au clic sur la flèche gauche, je vais à la slide précédente
+// Au clic sur la flèche gauche, je vais à la slide précédente (boucle infinie)
 leftArrow.addEventListener("click", () => {
-	// Je décrémente l’index
-	currentIndex -= 1;
+	// Si je suis sur la première slide, je passe à la dernière
+	if (currentIndex === 0) {
+		currentIndex = slides.length - 1;
+	} else {
+		// Sinon je recule normalement
+		currentIndex -= 1;
+	}
 
 	// J'affiche la slide correspondante
 	setSlide(currentIndex);
 });
 
-// Au clic sur la flèche droite, je vais à la slide suivante
+// Au clic sur la flèche droite, je vais à la slide suivante (boucle infinie)
 rightArrow.addEventListener("click", () => {
-	// Je décrémente l’index
-	currentIndex += 1;
+	// Si je suis sur la dernière slide, je reviens à la première
+	if (currentIndex === slides.length - 1) {
+		currentIndex = 0;
+	} else {
+		// Sinon j'avance normalement
+		currentIndex += 1;
+	}
 
 	// J'affiche la slide correspondante
 	setSlide(currentIndex);
