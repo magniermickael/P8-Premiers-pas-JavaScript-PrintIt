@@ -1,297 +1,673 @@
 /* variables declaration */
 :root {
+	/*CSS Variables*/
 	--primary-color: #3396C0;
+	/* Couleur principale */
 	--secondary-color: #CD006B;
+	/* Couleur secondaire */
 	--third-color: #EEE325;
+	/* Troisième couleur */
 }
 
-/* Reset CSS */
+/* ==============================
+	Reset CSS
+   ============================== */
 * {
 	-webkit-box-sizing: border-box;
+	/* Pour inclure le padding et la bordure dans la largeur et la hauteur des éléments */
 	-moz-box-sizing: border-box;
+	/* Pour inclure le padding et la bordure dans la largeur et la hauteur des éléments */
 	box-sizing: border-box;
+	/* Pour inclure le padding et la bordure dans la largeur et la hauteur des éléments */
 }
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+/* Reset des marges, paddings et autres propriétés par défaut */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	/* Reset des marges, paddings et autres propriétés par défaut */
 	margin: 0;
+	/* Suppression des marges */
 	padding: 0;
+	/* Suppression des paddings */
 	border: 0;
+	/* Suppression des bordures */
 	font: inherit;
+	/* Héritage de la police */
 	font-size: 100%;
+	/* Taille de police à 100% */
 	vertical-align: baseline;
+	/* Alignement vertical à la ligne de base */
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
+	/* Affichage en bloc */
 }
+
+/* Hauteur de ligne à 1 pour le body */
 body {
 	line-height: 1;
+	/* Hauteur de ligne à 1 */
 }
-ol, ul {
+
+/* Suppression des puces et numéros pour les listes */
+ol,
+ul {
 	list-style: none;
+	/* Suppression des puces et numéros */
 }
-blockquote, q {
+
+/* Suppression des guillemets par défaut pour les blockquotes et q */
+blockquote,
+q {
 	quotes: none;
+	/* Suppression des guillemets */
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+/* Suppression des guillemets avant et après les blockquotes et q */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: none;
+	/* Suppression du contenu */
 }
+
+/* Fusion des bordures et espacement à 0 pour les tableaux */
 table {
 	border-collapse: collapse;
+	/* Fusion des bordures */
 	border-spacing: 0;
+	/* Espacement des bordures à 0 */
 }
-/* body {
+
+/* ==============================
+	Styles globaux
+   ============================== */
+
+/* body { 
 
 }*/
+
+/* Espacement entre les sections */
 section {
 	margin-block: 6em;
+	/* Marge verticale de 6em */
 }
+
+/* Styles des titres */
 h2 {
 	font-family: 'Roboto Slab', sans-serif;
+	/* Police Roboto Slab pour les titres */
 	font-size: 40px;
+	/* Taille de police de 40px */
 	font-weight: 900;
+	/* Poids de police 900 */
 	margin-block: 1em;
-}
-h3{
-	font-family: 'Roboto Slab', sans-serif;
-	font-size: 22px;
-	font-weight: 900;
-	margin-block: 1em;
+	/* Marge verticale de 1em */
 }
 
-p, li {
-	font-family: Roboto, sans-serif;
-	font-size: 16px;
-	line-height: 26px;
+/* Styles des sous-titres */
+h3 {
+	font-family: 'Roboto Slab', sans-serif;
+	/* Police Roboto Slab pour les sous-titres */
+	font-size: 22px;
+	/* Taille de police de 22px */
+	font-weight: 900;
+	/* Poids de police 900 */
+	margin-block: 1em;
+	/* Marge verticale de 1em */
 }
+
+/* Styles des paragraphes et listes */
+p,
+li {
+	font-family: Roboto, sans-serif;
+	/* Police Roboto pour les paragraphes et listes */
+	font-size: 16px;
+	/* Taille de police de 16px */
+	line-height: 26px;
+	/* Hauteur de ligne de 26px */
+}
+
+/* ==============================
+	Styles spécifiques
+   ============================== */
+
+/* Conteneur principal */
 .container {
 	max-width: 1440px;
-	margin-inline:auto;
+	/* Largeur maximale de 1440px */
+	margin-inline: auto;
+	/* Centrage horizontal */
 	padding-inline: 5%;
+	/* Padding horizontal de 5% */
 }
+
+/* Styles de l'en-tête */
 header {
 	display: flex;
+	/* Utilisation de Flexbox */
 	justify-content: space-between;
+	/* Espacement entre les éléments */
 	align-items: center;
-}
-.logo{
-	width: 260px;
-	margin-block: 10px;
+	/* Alignement vertical au centre */
 }
 
-.btn {
-	background-color: var(--primary-color) ;
-	padding: 16px 32px;
-	margin-inline:5px;
-	border-radius: 5px;
-	color: white;
-	text-decoration: none;
+/* Styles du logo */
+.logo {
+	width: 260px;
+	/* Largeur de 260px */
+	margin-block: 10px;
+	/* Marge verticale de 10px */
 }
+
+/* Styles des boutons */
+.btn {
+	background-color: var(--primary-color);
+	/* Couleur de fond principale */
+	padding: 16px 32px;
+	/* Padding vertical de 16px et horizontal de 32px */
+	margin-inline: 5px;
+	/* Marge horizontale de 5px */
+	border-radius: 5px;
+	/* Bordure arrondie de 5px */
+	color: white;
+	/* Couleur du texte blanche */
+	text-decoration: none;
+	/* Suppression de la décoration de texte */
+}
+
+/* Styles du bouton devis */
 .devis {
 	background-color: var(--secondary-color);
+	/* Couleur de fond secondaire */
 }
 
+/* Styles au survol des boutons */
 #banner {
 	display: flex;
+	/* Utilisation de Flexbox */
 	flex-direction: column;
+	/* Direction des éléments en colonne */
 	align-items: center;
+	/* Alignement horizontal au centre */
 	justify-content: center;
+	/* Alignement vertical au centre */
 	width: 100%;
+	/* Largeur de 100% */
 	min-height: 470px;
+	/* Hauteur minimale de 470px */
 	position: relative;
+	/* Position relative pour le positionnement absolu des enfants */
 }
+
+/* Styles de l'image de la bannière */
 .banner-img {
 	position: absolute;
+	/* Position absolue */
 	width: 100%;
+	/* Largeur de 100% */
 	height: 100%;
+	/* Hauteur de 100% */
 	z-index: -1;
+	/* Position derrière les autres éléments */
 	object-fit: cover;
+	/* L'image couvre entièrement le conteneur */
 	object-position: center;
+	/* L'image est centrée */
 }
+
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 #banner .arrow {
+	/* Sélecteur pour les flèches gauche et droite */
 	position: absolute;
+	/* Position absolue */
+	top: 50%;
+	/* Position verticale au centre */
+	transform: translateY(-50%);
+	/* Centrage vertical */
 }
+
+/* Positionnement spécifique des flèches gauche et droite */
 #banner .arrow_left {
+	/* Sélecteur pour la flèche gauche */
 	left: 10px;
+	/* Positionnement à gauche */
 }
+
+/* Sélecteur pour la flèche droite */
 #banner .arrow_right {
+	/* Sélecteur pour la flèche droite */
 	right: 10px;
+	/* Positionnement à droite */
 }
+
 /* Gestion des points du carrousel */
 .dots {
+	/* Conteneur des points */
 	position: absolute;
+	/* Position absolue */
 	bottom: 40px;
+	/* Positionnement à 40px du bas */
 	display: flex;
+	/* Utilisation de Flexbox */
 }
+
+/* Style des points */
 .dot {
+	/* Sélecteur pour chaque point */
 	margin-inline: 5px;
+	/* Marge horizontale de 5px */
 	width: 13px;
+	/* Largeur de 13px */
 	height: 13px;
+	/* Hauteur de 13px */
 	background-color: #ffffff00;
+	/* Couleur de fond transparente */
 	border: 3px solid #fff;
+	/* Bordure blanche de 3px */
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	/* Bordure arrondie à 100% (cercle) */
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	;
+	/* Ombre portée */
 }
+
+/* Style du point sélectionné */
 .dot_selected {
+	/* Sélecteur pour le point sélectionné */
 	background-color: #fff;
+	/* Couleur de fond blanche */
 }
-/* Fin du code CSS pour le carousel */
+
+/* Styles du texte de la bannière */
 #banner p {
+	/* Sélecteur pour le paragraphe dans la bannière */
 	font-family: 'Roboto Slab', sans-serif;
+	/* Police Roboto Slab pour le texte de la bannière */
 	font-weight: 900;
+	/* Poids de police 900 */
 	font-size: 50px;
+	/* Taille de police de 50px */
 	line-height: 66px;
+	/* Hauteur de ligne de 66px */
 	color: white;
+	/* Couleur du texte blanche */
 	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	/* Ombre portée */
 	text-align: center;
+	/* Alignement du texte au centre */
 }
+
+/* Styles du span dans la bannière */
 #banner span {
+	/* Sélecteur pour le span dans la bannière */
 	display: block;
+	/* Affichage en bloc */
 	font-weight: 400;
+	/* Poids de police 400 */
 	font-size: 30px;
+	/* Taille de police de 30px */
 }
+
+/* Styles de la section "À propos de nous" */
 #about-us {
+	/* Sélecteur pour la section "À propos de nous" */
 	display: flex;
+	/* Utilisation de Flexbox */
 }
-#about-us article, #about-us aside {
-	flex:1;
+
+/* Styles des articles et aside dans la section "À propos de nous" */
+#about-us article,
+#about-us aside {
+	/* Sélecteur pour les articles et aside */
+	flex: 1;
+	/* Flexibilité égale pour les articles et aside */
 }
+
+/* Styles de l'article dans la section "À propos de nous" */
 #about-us li {
+	/* Sélecteur pour les listes dans la section "À propos de nous" */
 	background: url("./images/tricolor-icon.png") no-repeat left top;
+	/* Image de fond pour les listes */
 	font-size: 16px;
+	/* Taille de police de 16px */
 	line-height: 26px;
-	padding-left:2em;
+	/* Hauteur de ligne de 26px */
+	padding-left: 2em;
+	/* Padding gauche de 2em */
 	width: 65%;
+	/* Largeur de 65% */
 	margin-bottom: 1em;
+	/* Marge inférieure de 1em */
 
 }
 
+/* Styles de la section "Produits" */
 #products {
+	/* Sélecteur pour la section "Produits" */
 	display: flex;
+	/* Utilisation de Flexbox */
 	align-items: flex-start;
+	/* Alignement vertical au début */
 	flex-direction: row-reverse;
+	/* Inversion de l'ordre des éléments */
 }
-#products div, #products aside {
-	flex:1;
+
+/* Styles des div et aside dans la section "Produits" */
+#products div,
+#products aside {
+	/* Sélecteur pour les div et aside dans la section "Produits" */
+	flex: 1;
+	/* Flexibilité égale pour les div et aside */
 }
+
+/* Styles des div dans la section "Produits" */
 #products div {
+	/* Sélecteur pour les div dans la section "Produits" */
 	padding: 0 6em;
+	/* Padding horizontal de 6em */
 }
+
+/* Styles du titre dans la section "Produits" */
 #products h2 {
+	/* Sélecteur pour le titre dans la section "Produits" */
 	margin-top: 0;
+	/* Suppression de la marge supérieure */
 }
+
+/* Styles de l'arrière-plan jaune */
 .bg-yellow {
+	/* Sélecteur pour l'arrière-plan jaune */
 	background-color: var(--third-color);
+	/* Couleur de fond troisième couleur */
 }
+
+/* Styles de la section "Question" */
 #question {
+	/* Sélecteur pour la section "Question" */
 	display: flex;
+	/* Utilisation de Flexbox */
 	flex-direction: column;
+	/* Direction des éléments en colonne */
 	align-items: center;
+	/* Alignement horizontal au centre */
 	padding-block: 3em;
+	/* Padding vertical de 3em */
 }
+
+/* Styles du titre et du paragraphe dans la section "Question" */
 #question h2 {
+	/* Sélecteur pour le titre dans la section "Question" */
 	margin-bottom: 10px;
+	/* Marge inférieure de 10px */
 }
+
+/* Styles du paragraphe dans la section "Question" */
 #question p {
+	/* Sélecteur pour le paragraphe dans la section "Question" */
 	margin-bottom: 20px;
+	/* Marge inférieure de 20px */
 }
 
+/* Styles de la section "Pourquoi nous choisir" */
 #why-us {
+	/* Sélecteur pour la section "Pourquoi nous choisir" */
 	display: flex;
+	/* Utilisation de Flexbox */
 	flex-direction: column;
+	/* Direction des éléments en colonne */
 	text-align: center;
+	/* Alignement du texte au centre */
 }
-#why-us > div{
+
+/* Styles des div dans la section "Pourquoi nous choisir" */
+#why-us>div {
+	/* Sélecteur pour les div directs dans la section "Pourquoi nous choisir" */
 	display: flex;
+	/* Utilisation de Flexbox */
 	justify-content: space-evenly;
+	/* Espacement uniforme entre les éléments */
 }
+
+/* Styles des articles dans la section "Pourquoi nous choisir" */
 #why-us article {
+	/* Sélecteur pour les articles dans la section "Pourquoi nous choisir" */
 	max-width: 320px;
+	/* Largeur maximale de 320px */
 	display: flex;
+	/* Utilisation de Flexbox */
 	flex-direction: column;
+	/* Direction des éléments en colonne */
 }
+
+/* Styles des images dans la section "Pourquoi nous choisir" */
 #why-us img {
+	/* Sélecteur pour les images dans la section "Pourquoi nous choisir" */
 	width: 33%;
+	/* Largeur de 33% */
 	height: 150px;
+	/* Hauteur de 150px */
 	text-align: center;
+	/* Alignement du texte au centre */
 	margin-inline: auto;
+	/* Centrage horizontal */
 	margin-block: 0;
+	/* Suppression des marges verticales */
 	object-fit: contain;
+	/* L'image est contenue dans son conteneur */
 }
 
-.bg-lightblue{
+/* Styles de l'arrière-plan bleu clair */
+.bg-lightblue {
+	/* Sélecteur pour l'arrière-plan bleu clair */
 	background-color: #E6F4FB;
+	/* Couleur de fond bleu clair */
 }
+
+/* Styles de la section "Contact" */
 #contact {
+	/* Sélecteur pour la section "Contact" */
 	margin-bottom: 0;
-}
-#contact article, #contact div {
-	flex:1;
+	/* Suppression de la marge inférieure */
 }
 
+/* Styles des articles et div dans la section "Contact" */
+#contact article,
+#contact div {
+	/* Sélecteur pour les articles et div dans la section "Contact" */
+	flex: 1;
+	/* Flexibilité égale pour les articles et div */
+}
 
+/* Styles du conteneur dans la section "Contact" */
 #contact .container {
+	/* Sélecteur pour le conteneur dans la section "Contact" */
 	flex-direction: row;
+	/* Direction des éléments en ligne */
 	display: flex;
-	padding: 6em ;
+	/* Utilisation de Flexbox */
+	padding: 6em;
+	/* Padding de 6em */
 }
 
-#contact .container > div > div {
+/* Styles des div dans le conteneur de la section "Contact" */
+#contact .container>div>div {
+	/* Sélecteur pour les div dans le conteneur de la section "Contact" */
 	display: flex;
+	/* Utilisation de Flexbox */
 	padding-bottom: 20px;
+	/* Padding inférieur de 20px */
 }
 
+/* Styles des titres h3 dans la section "Contact" */
 #contact h3 {
+	/* Sélecteur pour les titres h3 dans la section "Contact" */
 	margin-top: 0;
+	/* Suppression de la marge supérieure */
 	background: url("./images/tricolor-icon.png") no-repeat left top;
-	padding-left:1.5em;
+	/* Image de fond pour les titres h3 */
+	padding-left: 1.5em;
+	/* Padding gauche de 1.5em */
 	width: 200px;
+	/* Largeur de 200px */
 }
+
+/* Styles des icônes en ligne */
 .inline-icon {
+	/* Sélecteur pour les icônes en ligne */
 	vertical-align: middle;
+	/* Alignement vertical au milieu */
 }
+
+/* Styles du pied de page */
 footer {
+	/* Sélecteur pour le pied de page */
 	background-color: #28363D;
+	/* Couleur de fond gris foncé */
 	color: white;
+	/* Couleur du texte blanche */
 	display: flex;
+	/* Utilisation de Flexbox */
 	padding-block: 3em;
+	/* Padding vertical de 3em */
 	justify-content: space-evenly;
+	/* Espacement uniforme entre les éléments */
 	font-size: 12px;
+	/* Taille de police de 12px */
 	align-items: center;
+	/* Alignement vertical au centre */
 }
+
+/* Styles des div dans le pied de page */
 footer div {
-
+	/* Sélecteur pour les div dans le pied de page */
 	position: relative;
+	/* Position relative */
 }
+
+/* Styles du logo dans le pied de page */
 .footer-logo {
+	/* Sélecteur pour le logo dans le pied de page */
 	background-color: white;
+	/* Couleur de fond blanche */
 	max-width: 308px;
+	/* Largeur maximale de 308px */
 	padding: 10px;
+	/* Padding de 10px */
 }
+
+/* Styles des contacts dans le pied de page */
 .footer-contact {
+	/* Sélecteur pour les contacts dans le pied de page */
 	margin-bottom: 1em;
+	/* Marge inférieure de 1em */
 	font-weight: 700;
+	/* Poids de police 700 */
 	font-size: 16px;
-
+	/* Taille de police de 16px */
 }
 
+/* ==============================
+	Media Queries
+   ============================== */
+/* Adaptation pour les écrans de largeur maximale de 1250px */
 @media all and (max-width: 1250px) {
-	#contact > article {
+	#contact>article {
+		/* Sélecteur pour l'article direct dans la section "Contact" */
 		flex: 2;
+		/* Flexibilité de 2 pour l'article */
 	}
 }
