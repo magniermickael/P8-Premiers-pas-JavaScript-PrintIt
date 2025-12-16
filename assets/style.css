@@ -125,6 +125,8 @@ header {
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 #banner .arrow_left {
 	left: 10px;
