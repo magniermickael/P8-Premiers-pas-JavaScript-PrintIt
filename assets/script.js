@@ -1,7 +1,8 @@
 /******************************************************
- * PROJET PRINT IT - Slider (Étape 2 + Étape 3)
+ * PROJET PRINT IT - Slider
  * Étape 2 : écouteurs de clic sur les flèches
  * Étape 3 : génération des bullet points (dots)
+ * Étape 4 : Changer image + texte + bullet au clic
  ******************************************************/
 
 /* -------- 1) Tableau des slides (données) -------- */
@@ -12,7 +13,8 @@ const slides = [
 	},
 	{
 		image: "slide2.jpg",
-		tagLine: 'Tirages haute définition grand format <span>pour vos bureaux et events</span>',
+		tagLine:
+			'Tirages haute définition grand format <span>pour vos bureaux et events</span>',
 	},
 	{
 		image: "slide3.jpg",
@@ -25,6 +27,12 @@ const slides = [
 ];
 
 /* -------- 2) Sélection des éléments du DOM -------- */
+// Je récupère l'image affichée dans le banner
+const bannerImg = document.querySelector(".banner-img");
+
+// Je récupère le texte affiché dans le banner (le <p> dans #banner)
+const bannerText = document.querySelector("#banner p");
+
 // Je récupère la flèche gauche
 const leftArrow = document.querySelector(".arrow_left");
 
@@ -34,7 +42,11 @@ const rightArrow = document.querySelector(".arrow_right");
 // Je récupère le conteneur des bullet points (déjà présent dans le HTML)
 const dotsContainer = document.querySelector(".dots");
 
-/* -------- 3) Génération des bullet points -------- */
+/* -------- 3) Index courant (slide affichée) -------- */
+// Je commence sur la première slide (index 0)
+let currentIndex = 0;
+
+/* -------- 4) Génération des bullet points (Étape 3) -------- */
 // Fonction qui crée 1 dot par slide
 function createDots() {
 	// Je vide le conteneur au cas où (évite les doublons si je relance)
@@ -48,7 +60,7 @@ function createDots() {
 		// J'ajoute la classe dot (style de base)
 		dot.classList.add("dot");
 
-		// Je stocke l’index dans un data-attribute (utile pour l’étape 4/bonus clic sur dot)
+		// Je stocke l’index dans un data-attribute (utile pour l’étape 4 et bonus clic sur dot)
 		dot.dataset.index = String(index);
 
 		// Si c'est le premier slide, je le marque comme sélectionné
@@ -61,16 +73,54 @@ function createDots() {
 	});
 }
 
-// Je lance la création des dots au chargement
+/* -------- 5) Mise à jour du bullet actif -------- */
+// Fonction qui met à jour la classe dot_selected selon l’index courant
+function updateDots(index) {
+	// Je récupère tous les dots
+	const dots = document.querySelectorAll(".dot");
+
+	// Je retire la classe dot_selected à tous
+	dots.forEach((dot) => dot.classList.remove("dot_selected"));
+
+	// J'ajoute la classe dot_selected au dot correspondant à l'index courant
+	dots[index].classList.add("dot_selected");
+}
+
+/* -------- 6) Affichage d’une slide (image + texte + bullet) -------- */
+// Fonction centrale : affiche la slide correspondant à l’index donné
+function setSlide(index) {
+	// Je mets à jour l’image en construisant le chemin demandé (dossier slideshow)
+	bannerImg.src = `./assets/images/slideshow/${slides[index].image}`;
+
+	// Je mets à jour le texte (innerHTML pour garder les <span>)
+	bannerText.innerHTML = slides[index].tagLine;
+
+	// Je mets à jour le bullet actif
+	updateDots(index);
+}
+
+/* -------- 7) Initialisation -------- */
+// Je crée les dots au chargement
 createDots();
 
-/* -------- 4) Event listeners sur les flèches (Étape 2) -------- */
-// Au clic sur la flèche gauche, je vérifie que l’événement fonctionne
+// J’affiche la première slide au chargement (synchronisation image/texte/dot)
+setSlide(currentIndex);
+
+/* -------- 8) Event listeners sur les flèches (Étape 4) -------- */
+// Au clic sur la flèche gauche, je vais à la slide précédente
 leftArrow.addEventListener("click", () => {
-	console.log("clic gauche");
+	// Je décrémente l’index
+	currentIndex -= 1;
+
+	// J'affiche la slide correspondante
+	setSlide(currentIndex);
 });
 
-// Au clic sur la flèche droite, je vérifie que l’événement fonctionne
+// Au clic sur la flèche droite, je vais à la slide suivante
 rightArrow.addEventListener("click", () => {
-	console.log("clic droit");
+	// Je décrémente l’index
+	currentIndex += 1;
+
+	// J'affiche la slide correspondante
+	setSlide(currentIndex);
 });
