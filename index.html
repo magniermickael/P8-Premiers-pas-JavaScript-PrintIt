@@ -1,130 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
+
+<head><!-- En-tête du document -->
+	<!-- Métadonnées -->
+	<meta charset="UTF-8"><!-- Définition de l'encodage des caractères -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Print it ! - Impressions d'entreprise</title>
-	<link rel="stylesheet" href="./assets/style.css">
+	<!-- Configuration de la fenêtre d'affichage pour les appareils mobiles -->
+	<!-- Titre et liens externes -->
+	<title>Print it ! - Impressions d'entreprise</title> <!-- Titre de la page -->
+	<link rel="stylesheet" href="./assets/style.css"> <!-- Lien vers le fichier CSS externe -->
+	<!-- Lien vers les polices Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- Préconnexion à Google Fonts pour améliorer les performances -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap" rel="stylesheet">
+	<!-- Préconnexion à Google Fonts avec gestion des ressources cross-origin -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap"
+		rel="stylesheet"> <!-- Lien vers les polices Roboto et Roboto Slab -->
 </head>
-<body>
-<header class="container">
-	<h1>
-		<img class="logo" src="./assets/images/logo.png" alt="Print it ! Impressions d'entreprises" >
-	</h1>
-	<a class="btn devis" href="mailto:contact@print-it.tld">Devis</a>
-</header>
-<main>
-	<div id="banner">
-		<img class="banner-img" src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it">
-		<p>Impressions tous formats <span>en boutique et en ligne</span></p>
-		<img class="arrow arrow_right" src="./assets/images/arrow_right.png" alt="Flèche droite">
-		<img class="arrow arrow_left" src="./assets/images/arrow_left.png" alt="Flèche gauche">
-		<div class="dots">
-		</div>
-	</div>
-	<section id="about-us" class="container">
-		<div>
-			<h2>Qui sommes-nous ?</h2>
-			<ul>
-				<li>Depuis près de 60 ans nous sommes un imprimeur familial spécialisé dans les besoins d’entreprises de petite et grande taille. Implantés à Rennes dans le quartier Bréquigny, nous accompagnons nos clients dans leurs projets d’impression.</li>
-				<li>De la création de vos fichiers à la livraison de vos imprimés, nous mettons tout notre savoir-faire à votre disposition afin de répondre au mieux à vos attentes.</li>
-			</ul>
-		</div>
-		<aside>
-			<img src="./assets/images/colors.jpg" alt="palette multicolore">
-		</aside>
-	</section>
-	<section id="products" class="container">
-		<div>
-			<h2>Nos produits</h2>
-			<p>Grâce à nos nombreuses années d'expérience dans l'impression de produits évènementiels et supports de communication, nous ne cessons d'innover et de perfectionner nos services afin de satisfaire au mieux nos clients. Vous pourrez parcourir les différentes rubriques du site afin de découvrir notre large gamme de papiers et finitions, pour des produits aussi divers que les dépliants ou plaquettes promotionnelles, les brochures, les flyers, les goodies d’entreprises, les autocollants de toutes tailles... </p>
-		</div>
-		<aside>
-			<img src="./assets/images/yellow-book.jpg" alt="Imprimeur avec un livre jaune dans les mains">
-		</aside>
 
-	</section>
-	<section id="question" class="bg-yellow">
-		<h2>Une question? Un devis?</h2>
-		<p>Appelez-nous au 02 12 34 56 78 ou faites une demande de devis ici :</p>
-		<a href="mailto:contact@print-it.tld" class="btn devis">Devis</a>
-	</section>
-	<section id="why-us" class="container">
-		<h2>Pourquoi faire appel à nous?</h2>
-		<div>
-			<article>
-				<img src="./assets/images/proximity-icon.png" alt="Icone Proximité">
-				<h3>Proximité</h3>
-				<p>Facile d’accès, une équipe compétente et à l'écoute des clients vous attend pour tous vos besoins d'impression et en communication visuelle.</p>
-			</article>
-			<article>
-				<img src="./assets/images/quality-icon.png" alt="Icone Qualité">
-				<h3>Qualité</h3>
-				<p>Qu'il s'agisse de copies simples, de brochures, de cartes de visite ou de conception, nous vous garantissons toujours des résultats optimaux.</p>
-			</article>
-			<article>
-				<img src="./assets/images/speedy-icon.png" alt="Rapidité Qualité">
-				<h3>Rapidité</h3>
-				<p>Vous pouvez compter sur nous pour répondre à vos sollicitations en temps et en heure.</p>
-			</article>
-		</div>
-	</section>
-	<section id="contact" class="bg-lightblue">
-		<div class="container">
-			<div>
-				<h2>Contact</h2>
-				<div>
-					<h3>Par téléphone</h3>
-					<ul>
-						<li>Appelez-nous au 02 12 34 56 78</li>
-						<li>Lun-Ven : 9h30-18h30</li>
-						<li>Sam : 10h-13h et 14h-18h30</li>
-					</ul>
-				</div>
-				<div>
-					<h3>Par e-mail</h3>
-					<p>
-						<a href="mailto:contact@print-it.tld" class="btn">Nous écrire</a>
-					</p>
-				</div>
-				<div>
-					<h3>Se rendre en boutique</h3>
-					<p>5, rue Yves Noël,<br>
-						35200 Rennes<br>
-						<img class="inline-icon" src="./assets/images/metro.png" alt="metro"/> Clémenceau</p>
-				</div>
-			</div>
-			<div>
-				<img src="./assets/images/magnifying-glass.jpg" alt="Loupe avec palette bleue">
-			</div>
+<body> <!-- Corps du document -->
+	<header class="container"> <!-- En-tête de la page -->
+		<h1> <!-- Logo de l'entreprise -->
+			<img class="logo" src="./assets/images/logo.png" alt="Print it ! Impressions d'entreprises">
+			<!-- Image du logo -->
+		</h1>
+		<a class="btn devis" href="mailto:contact@print-it.tld">Devis</a> <!-- Bouton de demande de devis -->
+	</header>
+	<main> <!-- Contenu principal de la page -->
+		<div id="banner">
+			<!-- Bannière principale : carousel - Ajout de l'ID "banner" pour cibler la bannière dans le JavaScript -->
+			<img class="banner-img" src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it">
+			<!-- Image de la bannière -->
+			<p>Impressions tous formats <span>en boutique et en ligne</span></p> <!-- Ajout du texte sur la bannière -->
 
-		</div>
-	</section>
-</main>
-<footer>
-	<div>
-		<p class="footer-contact">Contact</p>
-		<ul>
-			<li>Appelez-nous au 02 12 34 56 78</li>
-			<li>Lun-Ven : 9h30-18h30</li>
-			<li>Sam : 10h-13h et 14h-18h30</li>
-		</ul>
-	</div>
-	<div>
-		<p>5, rue Yves Noël,35200 Rennes<br>
-			<img src="./assets/images/metro.png" alt="metro"/> Clémenceau</p>
-	</div>
-	<div>
-		<a href="mailto:contact@print-it.tld" class="btn">Nous écrire</a>
-		<a href="mailto:contact@print-it.tld?subject=Demande&nbsp;de&nbsp;devis" class="btn devis">Devis</a>
-	</div>
-	<div>
-		<img class="footer-logo" src="./assets/images/logo.png" alt="Print it ! Impressions d'entreprises" >
-	</div>
-</footer>
-<script src="./assets/script.js"></script>
-</body>
-</html>
+			<img class="arrow arrow_right" src="./assets/images/arrow_right.png"
+				alt="Flèche droite"><!-- Ajout de la flèche droite -->
+			<img class="arrow arrow_left" src="./assets/images/arrow_left.png" alt="Flèche gauche">
+			<!-- Ajout de la flèche gauche -->
+			<!-- Ajout des points de navigation -->
+			<div class="dots"></div><!-- Conteneur des points de navigation -->
+		</div> <!-- Fin de la bannière principale -->
+
+		<section id="about-us" class="container"> <!-- Section "Qui sommes-nous ?" -->
+			<div> <!-- Contenu textuel de la section -->
+				<h2>Qui sommes-nous ?</h2> <!-- Titre de la section -->
+				<ul> <!-- Liste des informations sur l'entreprise -->
+					<li>Depuis près de 60 ans nous sommes un imprimeur familial spécialisé dans les besoins
+						d’entreprises de petite et grande taille. Implantés à Rennes dans le quartier Bréquigny, nous
+						accompagnons nos clients dans leurs projets d’impression.</li>
+					<!-- Premier élément de la liste -->
+					<li>De la création de vos fichiers à la livraison de vos imprimés, nous mettons tout notre
+						savoir-faire à votre disposition afin de répondre au mieux à vos attentes.</li>
+					<!-- Deuxième élément de la liste -->
+				</ul> <!-- Fin de la liste des informations sur l'entreprise -->
+			</div> <!-- Fin du contenu textuel -->
+			<aside> <!-- Contenu visuel de la section -->
+				<img src="./assets/images/colors.jpg" alt="palette multicolore"> <!-- Image illustrant la section -->
+			</aside> <!-- Fin du contenu visuel -->
+		</section> <!-- Fin de la section "Qui sommes-nous ?" -->
+
+		<section id="products" class="container"> <!-- Section "Nos produits" -->
+			<div> <!-- Contenu textuel de la section -->
+				<h2>Nos produits</h2> <!-- Titre de la section -->
+				<p>Grâce à nos nombreuses années d'expérience dans l'impression de produits évènementiels et supports de
+					communication, nous ne cessons d'innover et de perfectionner nos services afin de satisfaire au
+					mieux nos clients. Vous pourrez parcourir les différentes rubriques du site afin de découvrir notre
+					large gamme de papiers et finitions, pour des produits aussi divers que les dépliants ou plaquettes
+					promotionnelles, les brochures, les flyers, les goodies d’entreprises, les autocollants de toutes
+					tailles... </p> <!-- Paragraphe décrivant les produits -->
+			</div> <!-- Fin du contenu textuel -->
+			<aside> <!-- Contenu visuel de la section -->
+				<img src="./assets/images/yellow-book.jpg" alt="Imprimeur avec un livre jaune dans les mains">
+				<!-- Image illustrant la section -->
+			</aside> <!-- Fin du contenu visuel -->
+		</section> <!-- Fin de la section "Nos produits" -->
+
+		<section id="question" class="bg-yellow"> <!-- Section "Une question? Un devis?" -->
+			<h2>Une question? Un devis?</h2> <!-- Titre de la section -->
+			<p>Appelez-nous au 02 12 34 56 78 ou faites une demande de devis ici :</p>
+			<!-- Paragraphe invitant à contacter l'entreprise -->
+			<a href="mailto:contact@print-it.tld" class="btn devis">Devis</a> <!-- Bouton de demande de devis -->
+		</section> <!-- Fin de la section "Une question? Un devis?" -->
+
+		<section id="why-us" class="container"> <!-- Section "Pourquoi faire appel à nous?" -->
+			<h2>Pourquoi faire appel à nous?</h2> <!-- Titre de la section -->
+			<div> <!-- Conteneur des articles -->
+				<article> <!-- Premier article -->
+					<img src="./assets/images/proximity-icon.png" alt="Icone Proximité">
+					<!-- Image de l'icône de proximité -->
+					<h3>Proximité</h3> <!-- Titre de l'article -->
+					<p>Facile d’accès, une équipe compétente et à l'écoute des clients vous attend pour tous vos besoins
+						d'impression et en communication visuelle.</p> <!-- Paragraphe décrivant la proximité -->
+				</article> <!-- Fin de l'article -->
+				<article> <!-- Deuxième article -->
+					<img src="./assets/images/quality-icon.png" alt="Icone Qualité">
+					<!-- Image de l'icône de qualité -->
+					<h3>Qualité</h3> <!-- Titre de l'article -->
+					<p>Qu'il s'agisse de copies simples, de brochures, de cartes de visite ou de conception, nous vous
+						garantissons toujours des résultats optimaux.</p> <!-- Paragraphe décrivant la qualité -->
+				</article> <!-- Fin de l'article -->
+				<article> <!-- Troisième article -->
+					<img src="./assets/images/speedy-icon.png" alt="Rapidité Qualité">
+					<!-- Image de l'icône de rapidité -->
+					<h3>Rapidité</h3> <!-- Titre de l'article -->
+					<p>Vous pouvez compter sur nous pour répondre à vos sollicitations en temps et en heure.</p>
+					<!-- Paragraphe décrivant la rapidité -->
+				</article> <!-- Fin de l'article -->
+			</div> <!-- Fin du conteneur des articles -->
+		</section> <!-- Fin de la section "Pourquoi faire appel à nous?" -->
+
+		<section id="contact" class="bg-lightblue"> <!-- Section "Contact" -->
+			<div class="container"> <!-- Conteneur principal de la section -->
+				<div> <!-- Contenu textuel de la section -->
+					<h2>Contact</h2> <!-- Titre de la section -->
+					<div> <!-- Premier moyen de contact -->
+						<h3>Par téléphone</h3> <!-- Sous-titre du moyen de contact -->
+						<ul> <!-- Liste des informations de contact -->
+							<li>Appelez-nous au 02 12 34 56 78</li> <!-- Numéro de téléphone -->
+							<li>Lun-Ven : 9h30-18h30</li> <!-- Horaires d'ouverture en semaine -->
+							<li>Sam : 10h-13h et 14h-18h30</li> <!-- Horaires d'ouverture le samedi -->
+						</ul> <!-- Fin de la liste des informations de contact -->
+					</div> <!-- Fin du premier moyen de contact -->
+					<div> <!-- Deuxième moyen de contact -->
+						<h3>Par e-mail</h3> <!-- Sous-titre du moyen de contact -->
+						<p> <!-- Paragraphe avec le lien mailto -->
+							<a href="mailto:contact@print-it.tld" class="btn">Nous écrire</a>
+							<!-- Lien mailto pour envoyer un e-mail -->
+						</p> <!-- Fin du paragraphe -->
+					</div> <!-- Fin du deuxième moyen de contact -->
+					<div> <!-- Troisième moyen de contact -->
+						<h3>Se rendre en boutique</h3> <!-- Sous-titre du moyen de contact -->
+						<p>5, rue Yves Noël,<br> <!-- Adresse de la boutique -->
+							35200 Rennes<br> <!-- Code postal et ville -->
+							<img class="inline-icon" src="./assets/images/metro.png" alt="metro" /> Clémenceau
+						</p> <!-- Ligne de métro la plus proche -->
+					</div> <!-- Fin du troisième moyen de contact -->
+				</div> <!-- Fin du contenu textuel de la section -->
+				<div> <!-- Contenu visuel de la section -->
+					<img src="./assets/images/magnifying-glass.jpg" alt="Loupe avec palette bleue">
+					<!-- Image illustrant la section -->
+				</div> <!-- Fin du contenu visuel de la section -->
+			</div> <!-- Fin du conteneur principal de la section -->
+		</section> <!-- Fin de la section "Contact" -->
+
+	</main> <!-- Fin du contenu principal de la page -->
+
+	<footer> <!-- Pied de page -->
+
+		<div> <!-- Premier bloc du pied de page -->
+			<p class="footer-contact">Contact</p> <!-- Titre du bloc -->
+			<ul> <!-- Liste des informations de contact -->
+				<li>Appelez-nous au 02 12 34 56 78</li> <!-- Numéro de téléphone -->
+				<li>Lun-Ven : 9h30-18h30</li> <!-- Horaires d'ouverture en semaine -->
+				<li>Sam : 10h-13h et 14h-18h30</li> <!-- Horaires d'ouverture le samedi -->
+			</ul> <!-- Fin de la liste des informations de contact -->
+		</div> <!-- Fin du premier bloc du pied de page -->
+
+		<div> <!-- Deuxième bloc du pied de page -->
+			<p>5, rue Yves Noël,35200 Rennes<br> <!-- Adresse de la boutique -->
+				<img src="./assets/images/metro.png" alt="metro" /> Clémenceau
+			</p> <!-- Ligne de métro la plus proche -->
+		</div> <!-- Fin du deuxième bloc du pied de page -->
+
+		<div> <!-- Troisième bloc du pied de page -->
+			<a href="mailto:contact@print-it.tld" class="btn">Nous écrire</a>
+			<!-- Lien mailto pour envoyer un e-mail -->
+			<a href="mailto:contact@print-it.tld?subject=Demande&nbsp;de&nbsp;devis" class="btn devis">Devis</a>
+			<!-- Bouton de demande de devis -->
+		</div> <!-- Fin du troisième bloc du pied de page -->
+
+		<div> <!-- Quatrième bloc du pied de page -->
+			<img class="footer-logo" src="./assets/images/logo.png" alt="Print it ! Impressions d'entreprises">
+			<!-- Image du logo -->
+		</div> <!-- Fin du quatrième bloc du pied de page -->
+
+	</footer> <!-- Fin du pied de page -->
+
+	<script src="./assets/script.js"></script> <!-- Ajout du fichier JavaScript -->
+</body> <!-- Fin du corps du document -->
+
+</html> <!-- Fin du document HTML -->
